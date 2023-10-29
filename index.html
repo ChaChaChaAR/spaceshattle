@@ -101,6 +101,13 @@ src="assets/spaceshattle.glb"
     ></a-asset-item>
     </a-assets>
     
+    <a-assets>
+        <a-asset-item
+        id="tan"
+        src="assets/katakata.glb"
+        ></a-asset-item>
+        </a-assets>
+        
 
 
 
@@ -187,14 +194,32 @@ src="assets/spaceshattle.glb"
             gesture-handler
         ></a-entity>
             </a-marker>
-
+            <a-marker
+            id="animated-markerC"
+            type="pattern"
+            preset="custom"
+            url="assets/katakata.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerC"
+        >
+        <a-entity
+        id="bowser-model"
+        scale="0.12467735752605244 0.12467735752605244 0.12467735752605244"
+        animation-mixer="loop: repeat"
+        gltf-model="#katakata"
+        class="clickable"
+        gesture-handler
+    ></a-entity>
+        </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
 
         <div class="ui">
             <img id="snap">
-            <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons"></i></a>
+            <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">x</i></a>
             <a href="" id="take-photo" title="Take Photo"><i class="material-icons"></i></a>
           
         </div>
